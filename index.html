@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="theme-color" content="#0f172a">
+        <meta property="og:description" content="Explore your dream destinations with Vacation Visa😉">
+        <title>Vacation VISA</title>
+        <link rel="icon" href='data:image/svg+xml,
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <text y=".9em" font-size="90">✈️</text>
+        </svg>'>
+        <link rel="stylesheet" href="styling.css">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding:0;
+            }
+        </style>
+    </head>
+    <body> 
+        <!-- Hero section with background image -->
+        <section class="hero">
+            <div class="portal-line"></div>
+            <div class="door left-door"></div>
+            <div class="door right-door"></div>
+            <div class="hero-content">
+                <small>IIIT RGUKT NUZVID</small>
+                <h1>Vacation VISA Portal</h1>
+                <div class="plane">✈</div>
+                <p>HOLIDAYS where euphoria begins...</p>
+            </div>
+        </section> 
+        <!-- form--- -->
+        <div class="container">
+            <div class="panel">
+                <section id="formSection">
+                <h2 class="title">VISA Approval Proceedings</h2>
+                <p class="subtitle">Apply for your official Freedom VISA</p>
+            <div class="grid">
+            <div>
+                <div class="field">
+                    <label>Name</label>
+                    <input id="name" type="text" placeholder="Enter your name">
+                </div>
+                <div class="field hlo">
+                    <label>Destination</label>
+                    <select id="destination">
+                    <option>Grandma's home</option>
+                    <option>Family Trips</option>
+                    <option>Get Together Plans</option>
+                    <option>Academics (tpr tngs)</option>
+                    <option>Home + Sleep Mode</option>
+                    <option>Others</option>
+                    </select>
+                </div>
+                
+                <div class="field">
+                <label>Purpose of Travel</label>
+                <input type="text" value="Recover from exams">
+                </div>
+                <label style="padding-top: 10px;">Current status</label>
+                <label class="check"><input class="chk" type="checkbox"> Exams completed</label>
+                <label class="check"><input class="chk" type="checkbox"> Sleep sacrificed</label>
+                <label class="check"><input class="chk" type="checkbox"> I deserve this visa</label>
+            </div>
+
+            <!-- 2nd coloumn -->
+
+<div class="side">
+    <div class="sliderbox">
+    <div class="range-head">
+    <span>Exam Stress</span>
+    <strong id="stressValue">88%</strong>
+    </div>
+    <input id="stress" type="range" value="88" min="0" max="100">
+    <div class="percent">Emergency Holiday Eligibility</div>
+    </div>
+    
+    <div class="sliderbox">
+    <div class="range-head">
+    <span>Freedom Desire</span>
+    <strong id="freedomValue">95%</strong>
+    </div>
+    <input id="freedom" type="range" value="95" min="0" max="100">
+    <div class="percent">Vacation Urgency</div>
+    </div>
+    
+    <label>Slide To Open Immigration Gate</label>
+    <input type="range" value="100">
+    
+    <button id="submitBtn">Submit Visa Application</button>
+    </div>
+    </div>
+    </section>
+    
+    <section id="processing" class="hidden">
+    <div class="spinner"></div>
+    <h2 style="margin-top:25px">Processing Your Freedom...</h2>
+    <div id="status">Scanning academic survival records...</div>
+    <div class="bar">
+    <div id="fill" class="fill"></div>
+    </div>
+    <div id="progressText">0%</div>
+    </section>
+    
+    <section id="visa">
+    <div class="visagrid">
+    <div class="card">
+    <div class="stamp"><img src="stamp.jpeg"></div>
+    <h4 style="margin-bottom:25px">Holidays-Happiness</h4>
+    <div class="row"><span>Holder</span><span id="vname"></span></div>
+    <div class="row"><span>Institution</span><span>RGUKT Nuzvid</span></div>
+    <div class="row"><span>Stress level</span><span id="vstress"></span></div>
+    <div class="row"><span>Visa Type</span><span>2-Month Freedom Permit</span></div>
+    <div class="row"><span>Destination</span><span id="vdest"></span></div>
+    <div class="row"><span>Validity</span><span>Apr 28 - Jun 29</span></div>
+    </div>
+    <button class="download" onclick="downloadVisa()">Download Visa</button>
+    <div>
+    <div class="bigemoji"><img src="sumvibe.jpeg"></div>
+    <h4><br>Happy Summer Vacation!..</h4>
+    </div>
+    </div>
+    </section>
+    </div>
+    </div>
+    <!-- Script-------- -->
+
+<script>
+    const nameBox=document.getElementById('name');
+    const checks=[...document.querySelectorAll('.chk')];
+    const btn=document.getElementById('submitBtn');
+    const stress=document.getElementById('stress');
+    const freedom=document.getElementById('freedom');
+    
+    stress.oninput=()=>{
+    document.getElementById('stressValue').innerText=stress.value+'%';
+    }
+    
+    freedom.oninput=()=>{
+    document.getElementById('freedomValue').innerText=freedom.value+'%';
+    }
+    
+    function validate(){
+    let ok=nameBox.value.trim() && checks.every(c=>c.checked);
+    btn.classList.toggle('enabled',ok);
+    }
+    nameBox.addEventListener('input',validate);
+    checks.forEach(c=>c.addEventListener('change',validate));
+    
+    btn.onclick=function(){
+    if(!btn.classList.contains('enabled')) return;
+    
+    document.getElementById('formSection').style.display='none';
+    document.getElementById('processing').classList.remove('hidden');
+    
+    let p=0;
+    let fill=document.getElementById('fill');
+    let text=document.getElementById('progressText');
+    let status=document.getElementById('status');
+    
+    let timer=setInterval(()=>{
+    p+=4;
+    fill.style.width=p+'%';
+    text.innerText=p+'%';
+    
+    if(p<25)
+    status.innerText='Scanning academic survival records...';
+    else if(p<55)
+    status.innerText='Verifying 2-month freedom eligibility...';
+    else if(p<85)
+    status.innerText='Preparing visa approval stamp...';
+    else
+    status.innerText='Freedom permit almost ready...';
+    
+    if(p>=100){
+    clearInterval(timer);
+    setTimeout(showVisa,700);
+    }
+    },140)
+    }
+    
+    function showVisa(){
+    document.getElementById('processing').style.display='none';
+    document.getElementById('visa').style.display='block';
+    document.getElementById('vname').innerText=nameBox.value;
+    document.getElementById('vdest').innerText=document.getElementById('destination').value;
+    document.getElementById('vstress').innerText=stress.value+'%';
+    }
+    </script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+        function downloadVisa(){
+        const visaCard=document.querySelector('.card');
+        html2canvas(visaCard,{
+        scale:3,
+        backgroundColor:null
+        }).then(canvas=>{
+        let link=document.createElement('a');
+        link.download='Vacation-Visa.png';
+        link.href=canvas.toDataURL('image/png');
+        link.click();
+        });
+        }
+        </script>
+    </body>
+</html>
