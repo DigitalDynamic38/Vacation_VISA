@@ -328,11 +328,15 @@ input[type=text],select{
     .grid,.visagrid{grid-template-columns:1fr}
     .hero{
         background-size:cover;
-        background-position:top center;
+        background-position:top;
         background-repeat:no-repeat;
-        min-height:40vh;
+        min-height:30vh;
         width:100%;
         padding:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
         margin:0;
     }
     .hero-content{
@@ -390,15 +394,13 @@ input[type=text],select{
         position:relative;
         margin-top:-50px;
         box-sizing: border-box;
-        padding:0px 15px 90px;
+        padding:20px 12px 60px;
         background:url('b2.png');
-        background-position: center bottom;
-        display:flex;
-        justify-content:center;
+        background-position: center;
     }
     .panel{
     width:100%;
-        max-width:500px;
+    margin:-60px auto 0;
     position:relative;
     font-family: 'Times New Roman';
     border-radius: 10px;
