@@ -329,15 +329,9 @@ input[type=text],select{
     .hero{
         background-size:100%;
         background-position:top;
-        min-height:100dvh;
-        width:100%;
-        padding:0;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        margin:0;
-        
+        min-height:100svh; 
+        padding-top:30px;
+        margin-bottom: 0;
     }
     .hero-content{
         position:absolute;
@@ -376,7 +370,7 @@ input[type=text],select{
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         position:relative;
-        bottom:-93px;
+        bottom:-90px;
         opacity:0;
         left:20px;
         animation:fad 1s 4.2s forwards;
@@ -390,16 +384,15 @@ input[type=text],select{
         top:-15px;
     }
     .container{
-       width:100%;
-        position:relative;
-      transform: translateY(-80px);
-         min-height:100vh;
+        width:100%;
+        position:absolute;
+        transform: translateY(-410px);
         box-sizing: border-box;
-        padding:20px 12px 60px;
+        padding:15px 12px 90px;
         background:url('b2.png');
-        background-position: center;
+        background-position: center 90%;
     }
-    .panel{
+     .panel{
     width:100%;
          margin-top:0;
     position:relative;
@@ -446,7 +439,6 @@ input[type=text],select{
     input[type=text]:focus{
         border:none;
         border-bottom:  #31d8d8 solid 1.5px;
-        background:none;
         border-radius:2px;
     } 
     .check{
@@ -467,7 +459,7 @@ input[type=text],select{
         font-size: 14px;
         border-radius:10px;
         color:black;
-        font-weight:700;
+        font-weight:500;
         }
         .sliderbox{margin-bottom:9px}
         .range-head{
@@ -516,8 +508,7 @@ input[type=text],select{
         /* ------------processings------------- */
         #processing{
             text-align:center;
-           min-height:100vh;
-            padding:56px 16px 90px;
+            padding:56px 16px;
             }
             .spinner{
             width:60px;
