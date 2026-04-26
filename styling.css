@@ -438,6 +438,7 @@ input[type=text],select{
     input[type=text]:focus{
         border:none;
         border-bottom:  #31d8d8 solid 1.5px;
+        background:none;
         border-radius:2px;
     } 
     .check{
@@ -507,7 +508,7 @@ input[type=text],select{
         /* ------------processings------------- */
         #processing{
             text-align:center;
-            padding:56px 16px;
+            padding:56px 16px 90px;
             }
             .spinner{
             width:60px;
