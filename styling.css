@@ -32,9 +32,9 @@ body::-webkit-scrollbar-thumb{
 /* ....HERO....... */
 .hero{
     background:url('img2.png');
-    background-position:center 68%;
-    background-repeat: no-repeat;
-    background-size: 108%;
+    background-position:center 30%;
+    background-size:cover;
+       background-repeat:no-repeat;
     filter:saturate(1.18) contrast(1.05);
     height:80vh;
     position:relative;
