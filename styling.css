@@ -370,7 +370,7 @@ input[type=text],select{
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         position:relative;
-        bottom:-80px;
+        bottom:-93px;
         opacity:0;
         left:20px;
         animation:fad 1s 4.2s forwards;
@@ -388,7 +388,7 @@ input[type=text],select{
         position:absolute;
         margin-top:-125%;
         box-sizing: border-box;
-        padding:15px 12px 90px;
+        padding:35px 12px 90px;
         background:url('b2.png');
         background-position: center 90%;
     }
@@ -459,7 +459,7 @@ input[type=text],select{
         font-size: 14px;
         border-radius:10px;
         color:black;
-        font-weight:500;
+        font-weight:700;
         }
         .sliderbox{margin-bottom:9px}
         .range-head{
