@@ -327,10 +327,9 @@ input[type=text],select{
 @media(max-width:760px){
     .grid,.visagrid{grid-template-columns:1fr}
     .hero{
-        background-size:cover;
+        background-size:100%;
         background-position:top;
-        background-repeat:no-repeat;
-        min-height:30vh;
+        min-height:100svh;
         width:100%;
         padding:0;
         display:flex;
