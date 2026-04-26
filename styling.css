@@ -370,7 +370,7 @@ input[type=text],select{
         font-family: 'Times New Roman', Times, serif;
         font-style: italic;
         position:relative;
-        bottom:-90px;
+        bottom:-80px;
         opacity:0;
         left:20px;
         animation:fad 1s 4.2s forwards;
@@ -384,24 +384,24 @@ input[type=text],select{
         top:-15px;
     }
     .container{
-        width:100%;
-        margin-top:-1000px;
+       width:100%;
         position:absolute;
-        z-index:10;
+        margin-top:-125%;
         box-sizing: border-box;
         padding:15px 12px 90px;
         background:url('b2.png');
         background-position: center 90%;
     }
     .panel{
-    width:100%;
+     width:100%;
     position:relative;
     font-family: 'Times New Roman';
     border-radius: 10px;
     padding:10px 12px;
-    top:70px;
+    top:0px;
     background:linear-gradient(135deg,#d5f6f6 0%,#ffffff 32%,#ffffff 68%,#c0ffff 100%);
     border:1px solid #d6f9f9;
+    }
     }
     .title{
         font-size:19px;
