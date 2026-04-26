@@ -327,11 +327,13 @@ input[type=text],select{
 @media(max-width:760px){
     .grid,.visagrid{grid-template-columns:1fr}
     .hero{
-        background-size:100%;
-        background-position:top;
-        min-height:100svh; 
-        padding-top:30px;
-        margin-bottom: 0;
+        background-size:cover;
+        background-position:top center;
+        background-repeat:no-repeat;
+        min-height:40vh;
+        width:100%;
+        padding:0;
+        margin:0;
     }
     .hero-content{
         position:absolute;
@@ -385,20 +387,23 @@ input[type=text],select{
     }
     .container{
        width:100%;
-        position:absolute;
-        margin-top:-125%;
+        position:relative;
+        margin-top:-50px;
         box-sizing: border-box;
-        padding:35px 12px 90px;
+        padding:0px 15px 90px;
         background:url('b2.png');
-        background-position: center 90%;
+        background-position: center bottom;
+        display:flex;
+        justify-content:center;
     }
     .panel{
     width:100%;
+        max-width:500px;
     position:relative;
     font-family: 'Times New Roman';
     border-radius: 10px;
     padding:10px 12px;
-    top:70px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.1);
     background:linear-gradient(135deg,#d5f6f6 0%,#ffffff 32%,#ffffff 68%,#c0ffff 100%);
     border:1px solid #d6f9f9;
     }
